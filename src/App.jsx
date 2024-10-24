@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Button from './components/Button';
+import './App.css';  // Estilos globales de la aplicación
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="buttons">  {/* Contenedor de los botones */}
+    <Button href="estadisticas/" icon="fa-chart-bar" title="Estadísticas REM" delay="0" />
+    <Button href="egresos_hospitalarios/" icon="fa-hospital" title="Egresos Hospitalarios" delay="100" />
+    <Button href="poblacion/" icon="fa-users" title="Población" delay="200" />
+    <Button href="lista_espera/" icon="fa-list-alt" title="Lista de Espera" delay="300" />
+    <Button href="mortalidad_natalidad/" icon="fa-heartbeat" title="Mortalidad / Natalidad" delay="400" />
+    <Button href="inmunizaciones/" icon="fa-syringe" title="R.N.I" delay="500" />
+    <Button href="prest_centinelas/" icon="fa-user-md" title="Prestaciones" delay="600" />
+    <Button href="publicaciones/" icon="fa-book" title="Publicaciones" delay="700" />
+    <Button href="at_urgencia/" icon="fa-ambulance" title="Atenciones de Urgencia" delay="800" />
+    <Button href="monitoreo_metas/" icon="fa-pie-chart" title="Monitoreo de Metas" delay="900" />
+    <Button href="red_asistencial/" icon="fa-h-square" title="Red Asistencial" delay="1000" />
+    <Button href="capsula/" icon="fa-graduation-cap" title="Capacitación" delay="1100" />
+    <Button href="noticias/" icon="fa-newspaper-o" title="Noticias" delay="1200" />
+  </div>
+  );
+};
 
-export default App
+export default App;
