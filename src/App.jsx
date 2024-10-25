@@ -1,34 +1,16 @@
 // src/App.jsx
 import React from 'react';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Button from './components/Button';
+import Header from './components/Header';
+import ButtonGroup from './components/ButtonGroup';
 import Footer from './components/Footer';
 import './styles/App.css';
 
 const App = () => {
   return (
     <div id="root">
-      <div className="header-container"> {/* Contenedor para Navbar y Banner */}
-        <Navbar />
-        <Banner />
-      </div>
-      <div className="app-content"> {/* Contenido principal después del banner */}
-        <div className="buttons"> {/* Contenedor de los botones */}
-          <Button href="estadisticas/" icon="fa-chart-bar" title="Estadísticas REM" delay="0" iconColor="#007bff" />
-          <Button href="egresos_hospitalarios/" icon="fa-hospital" title="Egresos Hospitalarios" delay="100" iconColor="#28a745" />
-          <Button href="poblacion/" icon="fa-users" title="Población" delay="200" iconColor="#dc3545" />
-          <Button href="lista_espera/" icon="fa-list-alt" title="Lista de Espera" delay="300" iconColor="#ffc107" />
-          <Button href="mortalidad_natalidad/" icon="fa-heartbeat" title="Mortalidad / Natalidad" delay="400" iconColor="#6c757d" />
-          <Button href="inmunizaciones/" icon="fa-syringe" title="R.N.I" delay="500" iconColor="#C8A2D5" />
-          <Button href="prest_centinelas/" icon="fa-user-md" title="Prestaciones" delay="600" iconColor="#17a2b8" />
-          <Button href="publicaciones/" icon="fa-book" title="Publicaciones" delay="700" iconColor="#fd7e14" />
-          <Button href="at_urgencia/" icon="fa-ambulance" title="Atenciones de Urgencia" delay="800" iconColor="#ff6b6b" />
-          <Button href="monitoreo_metas/" icon="fa-pie-chart" title="Monitoreo de Metas" delay="900" iconColor="#20c997" />
-          <Button href="red_asistencial/" icon="fa-h-square" title="Red Asistencial" delay="1000" iconColor="#6f42c1" />
-          <Button href="capsula/" icon="fa-graduation-cap" title="Capacitación" delay="1100" iconColor="#6610f2" />
-          <Button href="noticias/" icon="fa-newspaper-o" title="Noticias" delay="1200" iconColor="#795548" />
-        </div>
+      <Header /> {/* Contenedor de Navbar y Banner */}
+      <div className="app-content">
+        <ButtonGroup /> {/* Contenedor de los botones */}
       </div>
       <Footer />
     </div>
@@ -36,3 +18,4 @@ const App = () => {
 };
 
 export default App;
+
