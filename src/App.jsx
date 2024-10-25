@@ -9,12 +9,12 @@ import './styles/App.css';
 const App = () => {
   return (
     <div id="root">
-      <div className="header-container"> {/* Contenedor con fondo compartido para Navbar y Banner */}
+      <div className="header-container"> {/* Contenedor para Navbar y Banner */}
         <Navbar />
         <Banner />
       </div>
       <div className="app-content"> {/* Contenido principal después del banner */}
-        <div className="buttons">  {/* Contenedor de los botones */}
+        <div className="buttons"> {/* Contenedor de los botones */}
           <Button href="estadisticas/" icon="fa-chart-bar" title="Estadísticas REM" delay="0" iconColor="#007bff" />
           <Button href="egresos_hospitalarios/" icon="fa-hospital" title="Egresos Hospitalarios" delay="100" iconColor="#28a745" />
           <Button href="poblacion/" icon="fa-users" title="Población" delay="200" iconColor="#dc3545" />
@@ -36,5 +36,3 @@ const App = () => {
 };
 
 export default App;
-
-

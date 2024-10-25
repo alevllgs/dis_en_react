@@ -2,15 +2,14 @@
 
 .navbar {
     width: 100%;
-    background-color: transparent;
+    background-color: transparent; /* Fondo transparente */
     color: white;
     padding: 10px 20px;
-    margin: 0;
     transition: background-color 0.3s ease;
   }
   
   .navbar-scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro al hacer scroll */
   }
   
   .navbar a {

@@ -1,7 +1,7 @@
 // src/components/Banner.jsx
 import React from 'react';
-import '../styles/Banner.css'; // Importa los estilos
-import bannerImage from '../img/banner1.jpg'; // Importa la imagen
+import '../styles/Banner.css';
+import bannerImage from '../img/banner1.jpg';
 
 const Banner = () => {
   return (
