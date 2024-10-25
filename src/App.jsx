@@ -1,18 +1,19 @@
+// src/App.jsx
 import React from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Button from './components/Button';
-import Footer from './components/Footer'; // Importa el pie de página
-import './styles/App.css';  // Estilos globales
-
-
+import Footer from './components/Footer';
+import './styles/App.css';
 
 const App = () => {
   return (
-    <div id="root"> {/* Asegura que este contenedor ocupe toda la pantalla */}
-      <Navbar />
-      <div className="app-content">  {/* Contenedor que ocupa el espacio disponible */}
+    <div id="root">
+      <div className="header-container"> {/* Contenedor con fondo compartido para Navbar y Banner */}
+        <Navbar />
         <Banner />
+      </div>
+      <div className="app-content"> {/* Contenido principal después del banner */}
         <div className="buttons">  {/* Contenedor de los botones */}
           <Button href="estadisticas/" icon="fa-chart-bar" title="Estadísticas REM" delay="0" iconColor="#007bff" />
           <Button href="egresos_hospitalarios/" icon="fa-hospital" title="Egresos Hospitalarios" delay="100" iconColor="#28a745" />
@@ -29,10 +30,11 @@ const App = () => {
           <Button href="noticias/" icon="fa-newspaper-o" title="Noticias" delay="1200" iconColor="#795548" />
         </div>
       </div>
-      <Footer />  {/* El footer quedará al final gracias a Flexbox */}
+      <Footer />
     </div>
   );
 };
 
 export default App;
+
 

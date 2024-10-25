@@ -1,11 +1,12 @@
 // src/components/Banner.jsx
 import React from 'react';
-import '../styles/Banner.css'; // Importa los estilos desde la carpeta styles
+import '../styles/Banner.css'; // Importa los estilos
+import bannerImage from '../img/banner1.jpg'; // Importa la imagen
 
 const Banner = () => {
   return (
     <div className="banner">
-      <img src="https://via.placeholder.com/1200x300" alt="Banner 1" className="banner-image" />
+      <img src={bannerImage} alt="Banner Estadísticas" className="banner-image" />
     </div>
   );
 };

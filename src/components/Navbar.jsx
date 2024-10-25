@@ -1,8 +1,21 @@
-import React from "react";
+// src/components/Navbar.jsx
+import React, { useEffect, useState } from "react";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Cambia a true si el scroll es mayor a 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className={`navbar navbar-expand-lg ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -25,7 +38,6 @@ const Navbar = () => {
                 Inicio
               </a>
             </li>
-
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Quiénes somos
@@ -42,7 +54,6 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
