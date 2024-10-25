@@ -15,10 +15,10 @@ const ButtonGroup = () => {
       <Button href="prest_centinelas/" icon="fa-user-md" title="Prestaciones" delay="600" iconColor="#17a2b8" />
       <Button href="publicaciones/" icon="fa-book" title="Publicaciones" delay="700" iconColor="#fd7e14" />
       <Button href="at_urgencia/" icon="fa-ambulance" title="Atenciones de Urgencia" delay="800" iconColor="#ff6b6b" />
-      <Button href="monitoreo_metas/" icon="fa-pie-chart" title="Monitoreo de Metas" delay="900" iconColor="#20c997" />
+      <Button href="monitoreo_metas/" icon="fa-chart-pie" title="Monitoreo de Metas" delay="900" iconColor="#20c997" />
       <Button href="red_asistencial/" icon="fa-h-square" title="Red Asistencial" delay="1000" iconColor="#6f42c1" />
       <Button href="capsula/" icon="fa-graduation-cap" title="Capacitación" delay="1100" iconColor="#6610f2" />
-      <Button href="noticias/" icon="fa-newspaper-o" title="Noticias" delay="1200" iconColor="#795548" />
+      <Button href="noticias/" icon="fa-newspaper" title="Noticias" delay="1200" iconColor="#795548" />
     </div>
   );
 };
